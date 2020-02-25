@@ -1,0 +1,121 @@
+$Red: hsl(0, 100%, 68%);
+$Very_Dark_Blue: hsl(230, 29%, 20%);
+$Dark_Grayish_Blue: hsl(230, 11%, 40%);
+$Grayish_Blue: hsl(231, 7%, 65%);
+$Light_Grayish_Blue: hsl(207, 33%, 95%);
+
+
+
+body{ margin: 0; 
+    padding: 0;
+    font-family: 'Barlow Condensed', ;
+    font-size: 18px;
+    font-weight: 400px;
+}
+
+.mainHeader{font-family: 'Barlow', ;
+    &mainHeader__nav{display: inline;}
+    &__nav-logo{margin: 60px 160px;}
+    &__menu{
+        float: right;
+        line-height: 100px;
+        margin: 20px 160px;
+    }
+    &__menu a{
+        margin: 60px 10px;
+        color: $Dark_Grayish_Blue;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 900;
+        padding: 0 10px;
+        transition: 0.4s;
+    }
+    &__menu a:hover{
+        text-decoration: underline;
+    }
+    &__nav-show,&__nav-hide{
+        transition: 0.4s;
+        font-size: 30px;
+        cursor: pointer;
+        display: none;
+    }
+    &__nav-show{
+        float: right;
+    }
+    &__nav-show img{
+        line-height: 100px;
+    }
+    &__nav-menu a:hover,&__nav-show:hover,&__nav-hide:hover{
+        color: $Red;
+    }
+    &__background{
+        float: right;
+        overflow: hidden;
+        margin-top: 40px;
+            }
+    &__background img{
+        margin-right: -265px;
+
+    }
+    &__menu-point a,&__menu-login a{
+        color:$Grayish_Blue;
+    }
+
+}
+#chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+.content{
+    margin: 80px 160px;
+    &__title{margin-bottom: 20px;}
+    &__title-new{
+        color: white;
+        background-color: #000000;
+        padding: 4px 12px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        margin-right: 10px;
+    }
+    &__title-dashboard{
+        text-transform: uppercase;
+        color: $Grayish_Blue;
+        letter-spacing: 6px;
+    }
+    &__subtitle{
+        text-transform: uppercase;
+        font-size: 80px;
+        font-weight: 900;
+        margin-bottom: 20px;
+        line-height: 80px;
+    }
+    &__subtitle-para{
+        color: $Dark_Grayish_Blue;
+        margin-bottom: 40px;
+    }
+    &__button{
+        background-color: $Red;
+        border: none;
+        color: white;
+        padding: 15px 28px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 6px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    &__button:hover{
+        background-color: rgba($Red, $alpha: 0.7);
+    }
+    &__subtitle-lastline{
+        text-transform: uppercase;
+        color: $Grayish_Blue;
+        letter-spacing: 2px;
+    }
+}

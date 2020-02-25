@@ -1,0 +1,26 @@
+{
+  "name": "brief",
+  "version": "1.0.0",
+  "description": "Le projet permet d'améliorer vos compétences dans un environnement de travail réel.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass SASS/main.scss CSS/style.css",
+    "watch": "node-sass SASS/main.scss CSS/style.css -w",
+    "compressed": "node-sass SASS/main.scss CSS/style.css -w --output-style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abbassihraf/C2N3-Reenforcement.git"
+  },
+  "keywords": [],
+  "author": "achraf abbassi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abbassihraf/C2N3-Reenforcement/issues"
+  },
+  "homepage": "https://github.com/Abbassihraf/C2N3-Reenforcement#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {}
+}
