@@ -1,68 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed:400,700&display=swap" rel="stylesheet">
+  <link href="./css/normalize.css" rel="stylesheet">
+  <link href="./css/main.css" rel="stylesheet">
+  <title>Frontend Mentor | Project tracking intro component</title>
+</head>
 
-    <title>Project tracking intro component</title>
+<body>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body>
-    <header class="mainHeader">
-      <span class="mainHeader__nav">
-          <svg class="mainHeader__nav-logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><g fill="#323334" fill-rule="evenodd"><path d="M0 32V.241h23.041zM31.15 32V.241h-4.411L17.48 13.158zM3.645 32l11.854-15.879L27.353 32z"/></g></svg>
-      </span>
-      <input type="checkbox" id="chk">
-      <label for="chk" class="mainHeader__nav-show">
-        <img src="/images/icon-hamburger.svg" alt="hamburger Menu">
-      </label>
-      <ul class="mainHeader__menu">
-        <il>
-        <a href="#">product</a></il>
-        <il><a href="#">features</a></il>
-        <il><a href="#">pricing</a></il>
-        <il><a href="#" class="mainHeader__menu-point" ></a></il>
-        <il class="mainHeader__menu-login"><a href="#">login</a></il>
-        <label for="chk" class="mainHeader__nav-hide">
-          <img src="/images/icon-close.svg" alt="close MEnu">
-        </label>
-      </ul>
-    <div class="mainHeader__background">
-      <img src="/images/illustration-devices.svg" alt="background"  class="mainHeader__background-versionMobile">
-    </div>
+  <div class="bg-wrapper">
+    <!-----NAVBAR------>
+    <header class="nav-container">
+      <nav class="container nav">
+        <div class="nav__logo">
+          <img class="img-fluid" src="./images/logo.svg" alt="">
+        </div>
+        <ul class="nav__list">
+          <li class="nav__list__item"><a href="#">Product</a></li>
+          <li class="nav__list__item"><a href="#">Features</a></li>
+          <li class="nav__list__item"><a href="#">Pricing</a></li>
+          <li class="nav__list__item nav__list__item--separator"><span>&bull;</span></li>
+          <li class="nav__list__item nav__list__item--login"><a href="#">Login</a></li>
+        </ul>
+        <div class="nav__hamburger">
+          <div class="nav__hamburger__line"></div>
+          <div class="nav__hamburger__line"></div>
+          <div class="nav__hamburger__line"></div>
+        </div>
+      </nav>
     </header>
-    <section class="content">
-      <div class="content__title">
-        <span class="content__title-new">New</span> 
-        <span class="content__title-dashboard">Monograph Dashboard</span>
-      </div>
-   
-     <div class="content__subtitle"> Powerful insights <br> into your team </div>  
-    <div class="content__subtitle-para"> Project planning and time tracking <br> for agile teams</div> 
-    <button class="content__button">Schedule a demo</button> 
-    <span class="content__subtitle-lastline"> to see a live preview </span>
-  </section>
 
-  </body>
+    <div class="hero">
+
+      <div class="hero__content container">
+        <p class="title title--small title--spacing"><span>New</span> Monograph Dashboard</p>
+        <h1 class="title title--big">Powerful insights<br>into your team</h1>
+        <h2>Project planning and time tracking for agile teams</h2>
+
+        <div class="cta">
+          <a href="#" class="btn btn--primary">Schedule a demo</a>
+          <p class="cta__text title title--small">to see a preview</p>
+        </div>
+      </div>
+
+      <div class="hero__image">
+        <img class="img-fluid" src="./images/illustration-devices.svg">
+      </div>
+
+    </div>
+
+  </div>
+  <script>
+    const hamburger = document.querySelector(".nav__hamburger");
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("nav__hamburger--open");
+      document.querySelector(".nav__list").classList.toggle("nav__list--open");
+    });
+  </script>
+
+</body>
+
 </html>
